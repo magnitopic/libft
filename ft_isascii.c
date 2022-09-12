@@ -26,4 +26,4 @@ int	main(void)
 	printf("%d\n", isascii(42));
 	return (0);
 }
-/*
+*/
