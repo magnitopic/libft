@@ -25,11 +25,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-int main(void)
-{
-	char str[50]="Hello There";
-
-	ft_memset(str,'*',5);
-	return 0;
-}
