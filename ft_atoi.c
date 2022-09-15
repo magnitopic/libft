@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int static is_space(char c)
+static int	is_space(char c)
 {
 	if ((c > 8 && c < 14) || c == 32)
 		return (1);
@@ -41,11 +41,4 @@ int ft_atoi(char *str)
 		i++;
 	}
 	return (sign * num);
-}
-
-int main(void)
-{
-	printf("%d\n", ft_atoi("   \t -55555ab"));
-	printf("%d\n", atoi("    \t -55555ab"));
-	return (0);
 }
