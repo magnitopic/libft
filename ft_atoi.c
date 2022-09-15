@@ -12,34 +12,40 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int static is_space(char c)
 {
-	int	i;
-	int	num;
-	int	sign;
+	if ((c > 8 && c < 14) || c == 32)
+		return (1);
+	return (0);
+}
+
+int ft_atoi(char *str)
+{
+	int sign;
+	int i;
+	int num;
 
 	i = 0;
-	num = 0;
 	sign = 1;
-	while (!ft_isdigit(nptr[i]))
+	num = 0;
+	while (is_space(str[i]))
+		i++;
+	if (str[i] == '-')
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		sign *= -1;
 		i++;
 	}
-	while (ft_isdigit(nptr[i]))
+	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
 	{
 		num = num * 10 + str[i] - '0';
 		i++;
 	}
-	return (num);
+	return (sign * num);
 }
 
-/*
-int	main(void)
+int main(void)
 {
-	printf("%d\n", ft_atoi("    \t -+-1234ab567"));
-	printf("%d\n", atoi("    \t 1234ab567"));
+	printf("%d\n", ft_atoi("   \t -55555ab"));
+	printf("%d\n", atoi("    \t -55555ab"));
 	return (0);
 }
-*/
