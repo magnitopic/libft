@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:59:30 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:38 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/17 19:16:07 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ unsigned long	ft_strlen(char *s)
 		i++;
 	return (i);
 }
-
-/*
-int	main(void)
-{
-	char phrase[100]="Hello There";
-	printf("%lu\n", ft_strlen(phrase));
-	printf("%lu\n", strlen(phrase));
-	return (0);
-}
-*/

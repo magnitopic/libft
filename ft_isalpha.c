@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:33:12 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:15 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/17 19:15:28 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n", ft_isalpha('a'));
-	printf("%d\n", isalpha('a'));
-	return (0);
-}
-*/
