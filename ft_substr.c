@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:42:43 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:13 by alaparic         ###   ########.fr       */
+/*   Created: 2022/09/16 18:11:00 by alaparic          #+#    #+#             */
+/*   Updated: 2022/09/17 12:42:48 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (ft_isdigit(c) || ft_isalpha(c))
-		return (1);
-	return (0);
+    char *str;
+
+    str= malloc(len);
+    while ()
+    {
+        
+    }
 }
-/*
-int	main(void)
-{
-	printf("%d\n", ft_isalnum('3'));
-	printf("%d\n", isalnum('3'));
-	return (0);
-}
-*/

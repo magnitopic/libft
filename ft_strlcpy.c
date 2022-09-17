@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaparic <alaparic@student.42madrid>       +#+  +:+       +#+        */
+/*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:13:21 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/12 20:13:22 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/17 12:42:37 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ unsigned int	get_str_size(char *src)
 		i++;
 	return (i);
 }
+
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {

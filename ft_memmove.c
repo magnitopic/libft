@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaparic <alaparic@student.42madrid>       +#+  +:+       +#+        */
+/*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:30:46 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/13 19:30:47 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/17 12:42:30 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	while (len > 0)
 	{
 		*dst_cpy = *(char *)src;
+		
 		*(char *)src = 0;
 		dst_cpy++;
 		src++;

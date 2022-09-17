@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaparic <alaparic@student.42madrid>       +#+  +:+       +#+        */
+/*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:42:32 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/15 18:42:33 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/17 12:42:35 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t	lendts;
 	size_t	lensrc;
 	size_t	cont;
+
 
 	lendts = ft_strlen(dst);
 	lensrc = ft_strlen(src);
