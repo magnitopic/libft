@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:42:32 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:46:33 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 16:28:39 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,26 @@
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t	lendts;
-	size_t	lensrc;
-	size_t	cont;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+	size_t	j;
 
 
-	lendts = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	if (dstsize <= lendts)
-		return (lensrc + dstsize);
-	cont = lendts;
-	while (*src != '\0' && cont < (dstsize - 1))
-		*(dst + cont++) = *src++;
-	*(dst + cont) = '\0';
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	j = dst_len;
+	if (dstsize == 0)
+		return (src_len);
+	if (dstsize < dst_len)
+		return (src_len + dstsize);
 
-	return (lendts + lensrc);
-}
-
-int	main(void)
-{
-	//char	src[20] = "There";
-	//char	dest[20] = "Hello ";
-	char	src2[20] = "There";
-	char	dest2[20] = "Hello ";
-	//printf("%d", ft_strlcat(dest, src, 5 ));
-	printf("\n%lu", strlcat(dest2, src2, 20));
-	printf("\n%s, %s", src2, dest2);
-	return (0);
+	while (src[j] && (dst_len + j) < dstsize)
+		dst[i++] = src[j++];
+	if ((dst_len + j) == dstsize && dst_len < dstsize)
+		dst[--i] = '\0';
+	else
+		dst[i] = '\0';
+	return (src_len + dst_len);
 }
