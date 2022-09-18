@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:42:32 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/18 16:28:39 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 16:52:55 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t	i;
 	size_t	j;
 
-
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
@@ -28,7 +27,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 		return (src_len);
 	if (dstsize < dst_len)
 		return (src_len + dstsize);
-
 	while (src[j] && (dst_len + j) < dstsize)
 		dst[i++] = src[j++];
 	if ((dst_len + j) == dstsize && dst_len < dstsize)
