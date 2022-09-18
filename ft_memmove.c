@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:30:46 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:30 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 12:47:00 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*dst_cpy;
 
-	dst_cpy = dst;
+	dst_cpy = (char *)dst;
 	while (len > 0)
 	{
 		*dst_cpy = *(char *)src;
-		
-		*(char *)src = 0;
 		dst_cpy++;
 		src++;
 		len--;
 	}
 	return (dst);
-}
-
-int main(void)
-{
-	const char src[14] = "Hello There";
-   	char dest[14]="Hedfgdgdafsfgs";
-	memcpy(dest, src, 5);
-	printf("%s\n", dest);
-	printf("%s\n", src);
-	return (0);
 }
