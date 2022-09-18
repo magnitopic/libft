@@ -6,48 +6,31 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:13:21 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:37 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 16:38:11 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	get_str_size(char *src)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	int	i;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
-	while (src[i] != '\0')
-		i++;
-	return (i);
-}
-
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	srd_size;
-
-	i = 0;
-	srd_size = get_str_size(src);
-	if (size != 0)
+	if (!dst || !src)
+		return (0);
+	src_len = get_str_size(src);
+	if (!dstsize)
+		return (src_len);
+	while (src[i] != '\0' && i < dstsize)
 	{
-		while (i < size - 1 && src[i] != '\0')
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dst[i] = src[i];
+		i++;
 	}
-	return (srd_size);
-}
-
-int	main(void)
-{
-	char dest[100];
-	char src[100]="I'm in hello";
-	unsigned int size = 5;
-	printf("%d", ft_strlcpy(dest, src, size));
-	printf("\n%s", dest);
-	return (0);
+	if (dstsize < src_len)
+		dst[dstsize - 1] = '\0';
+	else if (dstsize != 0)
+		dst[i] = '\0';
+	return (src_len);
 }
