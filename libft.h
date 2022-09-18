@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 12:42:53 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 19:53:45 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int				ft_isprint(int c);
 int				ft_isalnum(int c);
 unsigned long	ft_strlen(char *s);
 void			*ft_memset(void *b, int c, size_t len);
+size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif

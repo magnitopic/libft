@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:42:32 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/18 17:53:56 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/18 19:57:44 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 
 	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
+	src_len = ft_strlen((char *)src);
 	i = 0;
 	j = dst_len;
 	if (dstsize == 0)
