@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:28:36 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/21 16:35:11 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/22 19:51:57 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		ft_putnbr_fd(s[i]);
+		ft_putnbr_fd(s[i], fd);
 	}
 }
