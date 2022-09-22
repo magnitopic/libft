@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:58:02 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/19 20:09:40 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/22 20:24:02 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	new_src = (char *)ft_calloc((end - start + 2), sizeof(char));
 	if (new_src)
-		ft_strcpy(new_src, s1 + start, (end - start + 2));
+		ft_strlcpy(new_src, s1 + start, (end - start + 2));
 	return (new_src);
 }
