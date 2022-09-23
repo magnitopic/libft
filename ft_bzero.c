@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:25:45 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/19 17:23:00 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/23 19:09:29 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	*a;
+	char	*a;
+	size_t	i;
 
 	a = s;
-	while (n > 0 && a)
+	i = 0;
+	while (i < n)
 	{
-		*a = 0;
-		a++;
-		n--;
+		*a++ = '\0';
+		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:30:46 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/18 14:01:50 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/23 19:53:55 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dst_cpy;
+	unsigned char	*dst_cpy;
+	unsigned char	*src_cpy;
 
-	dst_cpy = (char *)dst;
-	while (len > 0)
+	dst_cpy = (unsigned char *)dst;
+	src_cpy = (unsigned char *)src;
+	if (src_cpy > dst_cpy)
 	{
-		*dst_cpy = *(char *)src;
-		dst_cpy++;
-		src++;
-		len--;
+		while (len--)
+			*dst_cpy++ = *src_cpy++;
+	}
+	if (dst_cpy > src_cpy)
+	{
+		dst_cpy += len - 1;
+		src_cpy += len - 1;
+		while (len--)
+			*dst_cpy-- = *src_cpy--;
 	}
 	return (dst);
 }

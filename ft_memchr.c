@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 13:08:01 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 16:06:53 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/23 20:22:43 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	mys = (char *)s;
-	while (mys[i] != '\0' && n)
+	while (n > 0)
 	{
 		if (mys[i] == c)
 			return ((void *)&mys[i]);
