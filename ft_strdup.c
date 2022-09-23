@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 17:22:35 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/23 16:03:56 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:03:47 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	s1_len = strlen(s1);
-	s1_cpy = malloc(s1_len * sizeof(char));
+	s1_cpy = malloc(s1_len + 1 * sizeof(char));
+	if (!s1_cpy)
+		return (0);
 	while (i < s1_len)
 	{
 		s1_cpy[i] = s1[i];
 		i++;
 	}
+	s1_cpy[i] = '\0';
 	return (s1_cpy);
 }
