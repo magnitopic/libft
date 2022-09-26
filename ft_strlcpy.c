@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:13:21 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/23 16:24:30 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/26 20:17:35 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
 	src_len = ft_strlen(src);
 	if (!dstsize)
 		return (src_len);
