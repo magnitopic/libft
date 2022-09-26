@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:58:02 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/22 20:24:02 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:40:58 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (NULL);
 	start = 0;
-	end = strlen(s1) - 1;
+	end = ft_strlen(s1) - 1;
 	while (s1[start])
 	{
 		if (!ft_strchr(set, s1[start]))
