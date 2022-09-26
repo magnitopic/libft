@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 16:14:31 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/17 15:04:46 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/26 20:09:46 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
+	if (s[i] == c)
+		return ((char *)&s[i]);
 	return (0);
 }
