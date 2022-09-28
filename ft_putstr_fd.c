@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:36:06 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/19 20:10:35 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/28 17:54:11 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	int	i;
+
+	i = 0;
+	if (s != NULL)
+		while (s[i])
+			write(fd, &s[i++], 1);
 }
