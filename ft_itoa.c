@@ -6,63 +6,72 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:06:48 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/20 18:17:27 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:11:36 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_digits(int n, size_t *aux)
+static int	ft_nbrsize(int n)
 {
-	int	len;
+	int	size;
 
-	len = 0;
-	if (n == -2147483648)
-	{
-		*aux += 10;
-		return (11);
-	}
-	if (n == 0)
-	{
-		*aux += 1;
-		return (1);
-	}
-	if (n < 0)
-		len++;
+	size = 0;
+	if (n <= 0)
+		size++;
 	while (n != 0)
 	{
-		len++;
 		n /= 10;
-		*aux += 1;
+		size++;
 	}
-	return (len);
+	return (size);
+}
+
+static int	ft_intmincase(int n, char *str)
+{
+	char	*nstr;
+	int		i;
+	char	*auxstr;
+
+	nstr = str;
+	if (n == -2147483648)
+	{
+		i = -1;
+		auxstr = "-2147483648";
+		while (++i < 12)
+			nstr[i] = auxstr[i];
+		return (1);
+	}
+	else if (n == 0)
+	{
+		nstr[0] = '0';
+		nstr[1] = 0;
+		return (1);
+	}
+	return (0);
 }
 
 char	*ft_itoa(int n)
 {
-	size_t		len;
-	size_t		aux;
-	char		*str;
-	int			i;
+	char	*str;
+	int		size;
 
-	aux = 0;
-	len = count_digits(n, &aux);
-	str = malloc(len + 1 * sizeof(char));
-	i = 0;
-	if (!str)
-		return (NULL);
+	size = ft_nbrsize(n);
+	str = malloc(size + 1 * sizeof(char));
+	if (!(str))
+		return (0);
+	if (ft_intmincase(n, str) == 1)
+		return (str);
+	str[size--] = '\0';
 	if (n < 0)
 	{
 		n *= -1;
 		str[0] = '-';
 	}
-	str[len] = '\0';
-	len--;
-	while (aux--)
+	while (n > 0)
 	{
-		str[len--] = '0' + (n % 10);
+		str[size--] = '0' + (n % 10);
 		n /= 10;
-		i++;
 	}
 	return (str);
 }
@@ -70,7 +79,7 @@ char	*ft_itoa(int n)
 /*
 int	main(void)
 {
-	int i = -85;
+	int i = -2147483648;
 	printf("%s\n", ft_itoa(i));
 	return (0);
 }
