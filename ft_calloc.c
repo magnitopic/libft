@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:48:21 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/23 19:56:54 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:54:13 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
+	size_t	aux;
 
-	ptr = malloc(count * size);
+	aux = count * size;
+	if (aux == 1 && count != 1)
+		return (NULL);
+	ptr = malloc(aux);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
