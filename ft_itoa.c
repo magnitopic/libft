@@ -21,6 +21,8 @@ static int	count_digits(int n)
 		return (11);
 	if (n == 0)
 		return (1);
+	if (n < 0)
+		len++;
 	while (n >= 1)
 	{
 		len++;
@@ -33,9 +35,13 @@ char	*ft_itoa(int n)
 {
 	int		len;
 	char	*str;
+	int		i;
 
-	len = count_digits(n) + 1;
-	str = malloc(len * sizeof(char));
+	len = count_digits(n);
+	str = malloc(len + 1 * sizeof(char));
+	i = 0;
+	if (!str)
+		return (NULL);
 	if (n < 0)
 	{
 		n *= -1;
@@ -45,6 +51,16 @@ char	*ft_itoa(int n)
 	{
 		str[len] = '0' + (n % 10);
 		n /= 10;
+		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
+
+/*
+int	main(void)
+{
+	int i = -85;
+	printf("%s\n", ft_itoa(i));
+	return (0);
+}*/
