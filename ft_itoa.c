@@ -18,9 +18,15 @@ static int	count_digits(int n, size_t *aux)
 
 	len = 0;
 	if (n == -2147483648)
+	{
+		*aux += 10;
 		return (11);
+	}
 	if (n == 0)
+	{
+		*aux += 1;
 		return (1);
+	}
 	if (n < 0)
 		len++;
 	while (n != 0)
