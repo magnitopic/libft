@@ -6,11 +6,9 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/09/29 20:06:12 by alaparic         ###   ########.fr        #
+#    Updated: 2022/09/30 14:24:16 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-#
 
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c  \
 					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
