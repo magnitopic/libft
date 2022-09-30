@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:05:34 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/30 17:13:39 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:20:32 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,63 @@ static int	num_words(char const *s, char c)
 		}
 		s++;
 	}
-	retrun (num);
+	return (num);
+}
+
+static void	free_matrix(char **matrix, int row)
+{
+	while (row >= 0)
+	{
+		free(matrix[row]);
+		row--;
+	}
+}
+
+static const char	*num_letters(char const *s, char c, char **matrix, int row)
+{
+	int	letters;
+	int	i;
+
+	i = 0;
+	letters = 0;
+	while (s[i] == c)
+		i++;
+	while (s[i] && s[i] != c)
+	{
+		letters++;
+		i++;
+	}
+	if (matrix[row] == 0)
+	{
+		free_matrix(matrix, row);
+		return (NULL);
+	}
+	matrix[row] = malloc(sizeof(char) * (letters + 1));
+	s = s + i - letters;
+	ft_strlcpy(matrix[row], s, letters + 1);
+	return (s + letters + 1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
 	int		rows;
+	int		words;
 
 	if (!s)
 		return (NULL);
 	rows = num_words(s, c);
 	matrix = malloc((rows + 1) * sizeof(char *));
 	if (!matrix)
-		retrun (NULL);
+		return (NULL);
+	words = 0;
+	while (words < rows)
+	{
+		s = num_letters(s, c, matrix, words);
+		if (!s)
+			return (NULL);
+		words++;
+	}
+	matrix[rows] = 0;
 	return (matrix);
 }
