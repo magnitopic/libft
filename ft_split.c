@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:05:34 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/01 12:09:16 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/01 12:16:10 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,3 @@ char	**ft_split(char const *s, char c)
 	matrix[rows] = 0;
 	return (matrix);
 }
-
-/*
-int	main(void)
-{
-	char	*str = "Hello,There,My,Good,Friend,";
-	ft_split(str, ',');
-	return (0);
-}
-*/
