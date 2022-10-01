@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:05:34 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/30 18:20:32 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/01 12:09:16 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static void	free_matrix(char **matrix, int row)
 		free(matrix[row]);
 		row--;
 	}
+	free(matrix);
 }
 
 static const char	*num_letters(char const *s, char c, char **matrix, int row)
@@ -56,12 +57,12 @@ static const char	*num_letters(char const *s, char c, char **matrix, int row)
 		letters++;
 		i++;
 	}
+	matrix[row] = malloc(sizeof(char) * (letters + 1));
 	if (matrix[row] == 0)
 	{
 		free_matrix(matrix, row);
 		return (NULL);
 	}
-	matrix[row] = malloc(sizeof(char) * (letters + 1));
 	s = s + i - letters;
 	ft_strlcpy(matrix[row], s, letters + 1);
 	return (s + letters + 1);
@@ -90,3 +91,12 @@ char	**ft_split(char const *s, char c)
 	matrix[rows] = 0;
 	return (matrix);
 }
+
+/*
+int	main(void)
+{
+	char	*str = "Hello,There,My,Good,Friend,";
+	ft_split(str, ',');
+	return (0);
+}
+*/
