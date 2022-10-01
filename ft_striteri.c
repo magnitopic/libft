@@ -6,13 +6,13 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:21:23 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/21 15:32:07 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/01 12:50:05 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int		i;
+	unsigned int	i;
 
 	if (!s || !f)
 		return ;
