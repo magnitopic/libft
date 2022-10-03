@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/03 16:31:52 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:53:57 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <string.h>
 # include <stdlib.h>
 
 typedef struct s_list
