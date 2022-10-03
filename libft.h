@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/01 12:11:50 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:31:52 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <ctype.h>
 # include <string.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 //	Libc Functions
 int		ft_isalpha(int c);
