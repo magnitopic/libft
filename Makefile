@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/03 16:48:05 by alaparic         ###   ########.fr        #
+#    Updated: 2022/10/03 17:24:37 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ SRCS			=	ft_isalnum.c \
 					ft_strjoin.c \
 					ft_strmapi.c \
 					ft_strtrim.c \
-					ft_striteri.c \
+					ft_striteri.c 
 OBJS			= $(SRCS:.c=.o)
 
 SRCSB			=	ft_lstnew.c \
@@ -53,7 +53,7 @@ SRCSB			=	ft_lstnew.c \
 					ft_lstadd_back.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \
-					ft_lstmap.c \
+					ft_lstmap.c 
 					
 OBJSB			= $(SRCSB:.c=.o)
 
@@ -68,7 +68,8 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
-bonus:			
+bonus:			$(OBJSB)
+				ar rcs $(NAME) $(OBJSB)
 
 clean:
 				$(RM) $(OBJS)
