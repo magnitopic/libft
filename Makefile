@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/03 17:24:37 by alaparic         ###   ########.fr        #
+#    Updated: 2022/10/04 18:00:15 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,13 +48,12 @@ OBJS			= $(SRCS:.c=.o)
 
 SRCSB			=	ft_lstnew.c \
 					ft_lstadd_front.c \
-					ft_lstsize.c \
+					#ft_lstsize.c \
 					ft_lstlast.c \
 					ft_lstadd_back.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \
 					ft_lstmap.c 
-					
 OBJSB			= $(SRCSB:.c=.o)
 
 CC				= gcc
@@ -72,7 +71,7 @@ bonus:			$(OBJSB)
 				ar rcs $(NAME) $(OBJSB)
 
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(OBJSB)
 
 fclean:			clean
 				$(RM) $(NAME)
