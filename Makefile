@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/05 09:31:22 by alaparic         ###   ########.fr        #
+#    Updated: 2022/10/05 10:08:21 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,8 @@ SRCSB			=	ft_lstnew.c \
 					ft_lstadd_back.c \
 					ft_lstdelone.c \
 					ft_lstclear.c \
-					#ft_lstiter.c \
-					ft_lstmap.c 
+					ft_lstiter.c \
+					#ft_lstmap.c 
 OBJSB			= $(SRCSB:.c=.o)
 
 CC				= gcc
@@ -68,8 +68,8 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
-bonus:			$(OBJSB)
-				ar rcs $(NAME) $(OBJSB)
+bonus:			$(OBJS) $(OBJSB)
+				ar rcs $(NAME) $(OBJS) $(OBJSB)
 
 clean:
 				$(RM) $(OBJS) $(OBJSB)
@@ -79,4 +79,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re
+.PHONY:			all clean fclean re bonus
