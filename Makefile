@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/04 19:59:23 by alaparic         ###   ########.fr        #
+#    Updated: 2022/10/05 09:23:04 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,8 @@ SRCSB			=	ft_lstnew.c \
 					ft_lstsize.c \
 					ft_lstlast.c \
 					ft_lstadd_back.c \
-					#ft_lstdelone.c \
+					ft_lstdelone.c \
+					#ft_lstclear.c \
 					ft_lstiter.c \
 					ft_lstmap.c 
 OBJSB			= $(SRCSB:.c=.o)
