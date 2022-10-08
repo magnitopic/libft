@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:06:48 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/29 18:11:36 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:48:57 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	int		size;
 
 	size = ft_nbrsize(n);
-	str = malloc(size + 1 * sizeof(char));
+	str = malloc((size + 1) * sizeof(char));
 	if (!(str))
 		return (0);
 	if (ft_intmincase(n, str) == 1)

@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 12:46:34 by alaparic          #+#    #+#             */
-/*   Updated: 2022/09/21 15:38:58 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:21:07 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int		i;
 
 	if (!s || !f)
-		return ((void *)0);
+		return (0);
 	str = ft_strdup(s);
 	if (!str)
-		return ((void *)0);
+		return (0);
 	i = 0;
 	while (str[i])
 	{
