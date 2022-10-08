@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 19:07:11 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/06 18:35:16 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:36:44 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*aux;
 	t_list	*new_lst;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	aux = ft_lstnew(f(lst->content));
 	if (!aux)
@@ -29,7 +29,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		aux->next = ft_lstnew(f(lst->content));
 		if (!aux->next)
 		{
-			ft_lstdelone(lst, del);
+			if (!del)
+				ft_lstdelone(lst, del);
 			return (NULL);
 		}
 		aux = aux->next;
