@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/12/01 12:38:29 by alaparic         ###   ########.fr        #
+#    Updated: 2022/12/01 13:30:37 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,10 @@ SRCSPF			= 	ft_printf.c \
 					ft_printnum.c
 OBJSPF			= $(SRCSPF:.c=.o)
 
+SRCSGNL			=	get_next_line.c \
+					get_next_line_utils.c
+OBJSGNL			= $(SRCSGNL:.c=.o)
+
 CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
@@ -70,14 +74,14 @@ NAME			= libft.a
 
 all:			$(NAME)
 
-$(NAME):		$(OBJS) $(OBJSPF)
-				ar rcs $(NAME) $(OBJS) $(OBJSPF)
+$(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
+				ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
 
-bonus:			$(OBJS) $(OBJSB) $(OBJSPF)
-				ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF)
+bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
 
 clean:
-				$(RM) $(OBJS) $(OBJSB) $(OBJSPF)
+				$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
 
 fclean:			clean
 				$(RM) $(NAME)
