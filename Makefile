@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/06 16:44:08 by alaparic         ###   ########.fr        #
+#    Updated: 2022/12/01 12:38:29 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,11 @@ SRCSB			=	ft_lstnew.c \
 					ft_lstmap.c 
 OBJSB			= $(SRCSB:.c=.o)
 
+SRCSPF			= 	ft_printf.c \
+					ft_printalpha.c \
+					ft_printnum.c
+OBJSPF			= $(SRCSPF:.c=.o)
+
 CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
@@ -65,14 +70,14 @@ NAME			= libft.a
 
 all:			$(NAME)
 
-$(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+$(NAME):		$(OBJS) $(OBJSPF)
+				ar rcs $(NAME) $(OBJS) $(OBJSPF)
 
-bonus:			$(OBJS) $(OBJSB)
-				ar rcs $(NAME) $(OBJS) $(OBJSB)
+bonus:			$(OBJS) $(OBJSB) $(OBJSPF)
+				ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF)
 
 clean:
-				$(RM) $(OBJS) $(OBJSB)
+				$(RM) $(OBJS) $(OBJSB) $(OBJSPF)
 
 fclean:			clean
 				$(RM) $(NAME)
