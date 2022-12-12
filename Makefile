@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/12/01 13:30:37 by alaparic         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS			=	ft_isalnum.c \
 					ft_isprint.c \
 					ft_memcmp.c \
@@ -75,16 +63,19 @@ NAME			= libft.a
 all:			$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
-				ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
+				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
+				@printf "\nLibft compiled\n"
 
 bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
-				ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@printf "\nBonus compiled\n"
 
 clean:
-				$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@printf "Removed files\n"
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
 
 re:				fclean $(NAME)
 
