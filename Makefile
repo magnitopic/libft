@@ -64,19 +64,20 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
 				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
-				@printf "\nLibft compiled\n"
+				@printf "\nLibft compiled ✅\n"
 
 bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
 				@ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
-				@printf "\nBonus compiled\n"
+				@printf "\nBonus compiled ✅ ✨\n"
 
 clean:
 				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
-				@printf "Removed files\n"
+				@printf "Removed files 🗑️\n"
 
 fclean:			clean
 				@$(RM) $(NAME)
 
 re:				fclean $(NAME)
+				@printf "Libft re-compiled 🔄\n"
 
 .PHONY:			all clean fclean re bonus
