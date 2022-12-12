@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/12/12 15:47:35 by alaparic         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS			=	ft_isalnum.c \
 					ft_isprint.c \
 					ft_memcmp.c \
@@ -71,7 +59,7 @@ $(NAME):		$(OBJS)
 
 bonus:			$(OBJS) $(OBJSB)
 				@ar rcs $(NAME) $(OBJS) $(OBJSB)
-				@printf "\nBonus compiled ✅ ✨\n"
+				@printf "\nBonus compiled ✅✨\n"
 
 clean:
 				@$(RM) $(OBJS) $(OBJSB)
