@@ -6,7 +6,7 @@
 #    By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 17:43:24 by alaparic          #+#    #+#              #
-#    Updated: 2022/10/06 16:44:08 by alaparic         ###   ########.fr        #
+#    Updated: 2022/12/12 15:47:35 by alaparic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,17 +66,21 @@ NAME			= libft.a
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+				@ar rcs $(NAME) $(OBJS)
+				@printf "\nLibft compiled ✅\n"
 
 bonus:			$(OBJS) $(OBJSB)
-				ar rcs $(NAME) $(OBJS) $(OBJSB)
+				@ar rcs $(NAME) $(OBJS) $(OBJSB)
+				@printf "\nBonus compiled ✅ ✨\n"
 
 clean:
-				$(RM) $(OBJS) $(OBJSB)
+				@$(RM) $(OBJS) $(OBJSB)
+				@printf "Removed files 🗑️\n"
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
 
 re:				fclean $(NAME)
+				@printf "Libft re-compiled 🔄\n"
 
 .PHONY:			all clean fclean re bonus
