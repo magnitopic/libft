@@ -64,11 +64,11 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
 				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
-				@printf "\nLibft compiled ✅\n"
+				@printf "\nLibft compiled ✅\n\n"
 
 bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
 				@ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
-				@printf "\nLibft bonus compiled ✅✨\n"
+				@printf "\nLibft bonus compiled ✅✨\n\n"
 
 clean:
 				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)

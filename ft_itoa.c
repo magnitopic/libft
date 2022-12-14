@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:06:48 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/08 17:48:57 by alaparic         ###   ########.fr       */
+/*   Updated: 2022/12/14 11:01:35 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-/*
-int	main(void)
-{
-	int i = -2147483648;
-	printf("%s\n", ft_itoa(i));
-	return (0);
-}
-*/
