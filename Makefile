@@ -1,3 +1,4 @@
+# Libft
 SRCS			=	ft_isalnum.c \
 					ft_isprint.c \
 					ft_memcmp.c \
@@ -34,6 +35,7 @@ SRCS			=	ft_isalnum.c \
 					ft_striteri.c 
 OBJS			= $(SRCS:.c=.o)
 
+# Bonus
 SRCSB			=	ft_lstnew.c \
 					ft_lstadd_front.c \
 					ft_lstsize.c \
@@ -45,30 +47,54 @@ SRCSB			=	ft_lstnew.c \
 					ft_lstmap.c 
 OBJSB			= $(SRCSB:.c=.o)
 
+# ft_printf
+SRCSPF			= 	ft_printf.c \
+					ft_printalpha.c \
+					ft_printnum.c
+OBJSPF			= $(SRCSPF:.c=.o)
+
+# get_next_line
+SRCSGNL			=	get_next_line.c \
+					get_next_line_utils.c
+OBJSGNL			= $(SRCSGNL:.c=.o)
+
+# Compiler
 CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
+# Colours
+BLACK				=	\033[0;30m
+RED					=	\033[0;31m
+GREEN				=	\033[0;32m
+YELLOW				=	\033[0;33m
+BLUE				=	\033[0;34m
+PURPLE				=	\033[0;35m
+CYAN				=	\033[0;36m
+WHITE				=	\033[0;37m
+RESET				=	\033[0m
+
+# Rules
 all:			$(NAME)
 
-$(NAME):		$(OBJS)
-				@ar rcs $(NAME) $(OBJS)
-				@printf "\nLibft compiled ✅\n"
+$(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
+				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
+				@printf "$(BLUE)==> $(CYAN)Libft compiled ✅\n\n$(RESET)"
 
-bonus:			$(OBJS) $(OBJSB)
-				@ar rcs $(NAME) $(OBJS) $(OBJSB)
-				@printf "\nBonus compiled ✅✨\n"
+bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@printf "$(BLUE)==> $(CYAN)Libft bonus compiled ✅✨\n\n$(RESET)"
 
 clean:
-				@$(RM) $(OBJS) $(OBJSB)
-				@printf "Removed files 🗑️\n"
+				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@printf "\n$(BLUE)==> $(RED)Removed Libft 🗑️\n\n$(RESET)"
 
 fclean:			clean
 				@$(RM) $(NAME)
 
 re:				fclean $(NAME)
-				@printf "Libft re-compiled 🔄\n"
+				@printf "$(BLUE)==> $(CYAN)Libft re-compiled 🔄\n$(RESET)"
 
 .PHONY:			all clean fclean re bonus
