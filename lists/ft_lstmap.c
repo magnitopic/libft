@@ -6,11 +6,11 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 19:07:11 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/08 15:36:44 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:57:08 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

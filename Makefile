@@ -35,16 +35,16 @@ SRCS			=	ft_isalnum.c \
 					ft_striteri.c 
 OBJS			= $(SRCS:.c=.o)
 
-# Bonus
-SRCSB			=	ft_lstnew.c \
-					ft_lstadd_front.c \
-					ft_lstsize.c \
-					ft_lstlast.c \
-					ft_lstadd_back.c \
-					ft_lstdelone.c \
-					ft_lstclear.c \
-					ft_lstiter.c \
-					ft_lstmap.c 
+# Lists
+SRCSB			=	lists/ft_lstnew.c \
+					lists/ft_lstadd_front.c \
+					lists/ft_lstsize.c \
+					lists/ft_lstlast.c \
+					lists/ft_lstadd_back.c \
+					lists/ft_lstdelone.c \
+					lists/ft_lstclear.c \
+					lists/ft_lstiter.c \
+					lists/ft_lstmap.c 
 OBJSB			= $(SRCSB:.c=.o)
 
 # ft_printf

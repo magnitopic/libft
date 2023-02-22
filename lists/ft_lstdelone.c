@@ -6,11 +6,11 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 08:28:52 by mag               #+#    #+#             */
-/*   Updated: 2022/10/06 18:32:46 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:57:02 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

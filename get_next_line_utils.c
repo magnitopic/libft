@@ -6,11 +6,13 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:52:18 by alaparic          #+#    #+#             */
-/*   Updated: 2022/12/01 12:45:26 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:59:16 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// TODO: Remove unecessary functions
 
 size_t	ft_strlen(const char *s)
 {
