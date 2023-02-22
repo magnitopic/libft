@@ -44,7 +44,8 @@ SRCSB			=	lists/ft_lstnew.c \
 					lists/ft_lstdelone.c \
 					lists/ft_lstclear.c \
 					lists/ft_lstiter.c \
-					lists/ft_lstmap.c 
+					lists/ft_lstmap.c \
+					lists/ft_lstprint.c
 OBJSB			= $(SRCSB:.c=.o)
 
 # ft_printf
