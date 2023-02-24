@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:55:33 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/22 18:42:57 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:21:28 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@ void	ft_lstprint_char(t_list *lst)
 {
 	t_list	*node;
 
+	if (lst == NULL)
+	{
+		ft_printf("NULL\n");
+		return ;
+	}
 	node = lst;
 	while (node != NULL)
 	{
 		ft_printf("%c ", *(int *)(node -> content));
 		node = node->next;
 	}
+	ft_printf("\n");
 }
