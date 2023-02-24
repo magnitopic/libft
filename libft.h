@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/24 13:56:45 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/24 19:15:39 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	ft_putnbr_fd(int n, int fd);
 // Linked list functions
 void	ft_lstprint_int(t_list *lst);
 void	ft_lstprint_char(t_list *lst);
-t_list	ft_lstget(t_list *lst, int pos);
+t_list	*ft_get(t_list *lst, int pos);
 //	Bonus Functions
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
