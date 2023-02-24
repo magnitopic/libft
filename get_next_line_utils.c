@@ -6,23 +6,11 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:52:18 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/22 17:59:16 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/22 18:45:37 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// TODO: Remove unecessary functions
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -66,29 +54,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	return (&str[i]);
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	size_t	aux;
-	char	*a;
-	size_t	i;
-
-	aux = count * size;
-	if (aux == 1 && count != 1)
-		return (NULL);
-	ptr = malloc(aux);
-	if (!ptr)
-		return (NULL);
-	a = ptr;
-	i = 0;
-	while (i < aux)
-	{
-		*a++ = '\0';
-		i++;
-	}
-	return (ptr);
 }
 
 void	*ft_memchr(const void *s, int c, size_t n)

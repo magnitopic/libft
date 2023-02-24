@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/22 18:44:32 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/24 13:56:45 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	ft_putnbr_fd(int n, int fd);
 // Linked list functions
 void	ft_lstprint_int(t_list *lst);
 void	ft_lstprint_char(t_list *lst);
+t_list	ft_lstget(t_list *lst, int pos);
 //	Bonus Functions
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -94,11 +95,8 @@ int		ft_putunsig(unsigned int n);
 int		ft_putpoint(unsigned long n);
 
 // GNL functions
-size_t	ft_strlen(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *s, int c);
-void	*ft_calloc(size_t count, size_t size);
-void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 char	*get_next_line(int fd);
 #endif
