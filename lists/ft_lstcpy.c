@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 15:18:51 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/27 16:02:55 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:01:21 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ t_list	*ft_lstcpy(t_list *sorce)
 		*aux = *(int *)ft_get(sorce, i++)->content;
 		ft_lstadd_back(&new_lst, ft_lstnew(&*aux));
 	}
-	ft_printf("\n");
 	return (new_lst);
 }
