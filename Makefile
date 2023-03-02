@@ -39,6 +39,7 @@ OBJS			= $(SRCS:.c=.o)
 SRCSB			=	lists/ft_lstnew.c \
 					lists/ft_lstadd_front.c \
 					lists/ft_lstsize.c \
+					lists/ft_lstcompare.c \
 					lists/ft_lstlast.c \
 					lists/ft_lstadd_back.c \
 					lists/ft_lstdelone.c \
