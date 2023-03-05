@@ -6,11 +6,16 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:42:00 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/04 18:07:31 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/05 12:21:43 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/**
+ * Takes in two t_lists and returns 1 if they have the same values and 0 if not
+ * Having different length is considered different
+ */
 
 int	ft_lstcompare(t_list *lst1, t_list *lst2)
 {

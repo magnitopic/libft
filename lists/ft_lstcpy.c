@@ -6,11 +6,15 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 15:18:51 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/28 17:01:21 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/05 12:34:47 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/**
+ * Function that returns a copy of sorce's values but in a new memory region
+ */
 
 t_list	*ft_lstcpy(t_list *sorce)
 {

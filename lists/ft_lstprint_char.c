@@ -6,11 +6,15 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:55:33 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/24 17:21:28 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/05 12:32:42 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/**
+ * Function to print char* values stored in lst
+ */
 
 void	ft_lstprint_char(t_list *lst)
 {
