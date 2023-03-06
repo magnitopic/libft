@@ -52,6 +52,10 @@ SRCSB			=	lists/ft_lstnew.c \
 					lists/ft_lstcpy.c
 OBJSB			= $(SRCSB:.c=.o)
 
+# Math
+SRCMT			=	math/ft_aggregate.c
+OBJSM			= $(SRCMT:.c=.o)
+
 # ft_printf
 SRCSPF			= 	ft_printf.c \
 					ft_printalpha.c \
@@ -84,16 +88,16 @@ RESET				=	\033[0m
 # Rules
 all:			$(NAME)
 
-$(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL)
+$(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL) $(OBJSM)
 				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
 				@printf "$(BLUE)==> $(CYAN)Libft compiled ✅\n\n$(RESET)"
 
-bonus:			$(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
-				@ar rcs $(NAME) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+bonus:			$(NAME) $(OBJSB)
+				@ar rcs $(NAME) $(OBJSB)
 				@printf "$(BLUE)==> $(CYAN)Libft bonus compiled ✅✨\n\n$(RESET)"
 
 clean:
-				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL)
+				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL) $(OBJSM)
 				@printf "\n$(BLUE)==> $(RED)Removed Libft 🗑️\n\n$(RESET)"
 
 fclean:			clean

@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/02 16:48:07 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/06 16:03:57 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 char	*get_next_line(int fd);
+
+// math functions
+int		ft_agregate(int format, ...);
 #endif
