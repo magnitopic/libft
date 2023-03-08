@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_aggregate.c                                     :+:      :+:    :+:   */
+/*   ft_lstmin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/06 15:37:38 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/06 16:09:20 by alaparic         ###   ########.fr       */
+/*   Created: 2023/03/08 16:16:15 by alaparic          #+#    #+#             */
+/*   Updated: 2023/03/08 16:26:23 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_agregate(int format, ...)
+int	ft_lstmin(void *lst)
 {
-	va_list	ap;
-	int		result;
+	int	i;
+	int	lst_size;
+	int	min;
 
-	va_start(ap, format);
-	result = 0;
-	while (format++)
-		result += va_arg(ap, int);
-
-	va_end(ap);
-	return (result);
+	i = 0;
+	lst_size = ft_lstsize(lst);
+	while (i < lst_size)
+	{
+		if (*(int *)ft_get(lst, i)->content < min)
+			min = *(int *)ft_get(lst, i)->content;
+		i++;
+	}
+	return (min);
 }

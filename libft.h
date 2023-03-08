@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/06 16:03:57 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:42:49 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void	ft_lstprint_char(t_list *lst);
 t_list	*ft_get(t_list *lst, int pos);
 t_list	*ft_lstcpy(t_list *sorce);
 int		ft_lstcompare(t_list *lst1, t_list *lst2);
+int		ft_lstmin(void *lst);
 //	Bonus Functions
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -103,5 +104,5 @@ void	*ft_memchr(const void *s, int c, size_t n);
 char	*get_next_line(int fd);
 
 // math functions
-int		ft_agregate(int format, ...);
+int		ft_abs(long n)
 #endif

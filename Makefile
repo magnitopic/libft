@@ -49,11 +49,12 @@ SRCSB			=	lists/ft_lstnew.c \
 					lists/ft_lstprint_int.c \
 					lists/ft_lstprint_char.c \
 					lists/ft_get.c \
+					lists/ft_lstmin.c \
 					lists/ft_lstcpy.c
 OBJSB			= $(SRCSB:.c=.o)
 
 # Math
-SRCMT			=	math/ft_aggregate.c
+SRCMT			=	math/ft_abs.c
 OBJSM			= $(SRCMT:.c=.o)
 
 # ft_printf
