@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/08 16:42:49 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/08 17:13:00 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,5 @@ void	*ft_memchr(const void *s, int c, size_t n);
 char	*get_next_line(int fd);
 
 // math functions
-int		ft_abs(long n)
+int		ft_abs(long n);
 #endif
