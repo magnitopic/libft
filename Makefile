@@ -90,11 +90,11 @@ RESET				=	\033[0m
 all:			$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL) $(OBJSM)
-				@ar rcs $(NAME) $(OBJS) $(OBJSPF) $(OBJSGNL)
+				@ar rcs $(NAME) $^
 				@printf "$(BLUE)==> $(CYAN)Libft compiled ✅\n\n$(RESET)"
 
 bonus:			$(NAME) $(OBJSB)
-				@ar rcs $(NAME) $(OBJSB)
+				@ar rcs $^
 				@printf "$(BLUE)==> $(CYAN)Libft bonus compiled ✅✨\n\n$(RESET)"
 
 clean:
