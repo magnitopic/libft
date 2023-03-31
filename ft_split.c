@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:05:34 by alaparic          #+#    #+#             */
-/*   Updated: 2022/10/01 12:16:10 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/03/31 16:48:38 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ static int	num_words(char const *s, char c)
 	return (num);
 }
 
-static void	free_matrix(char **matrix, int row)
+void	free_matrix(char **matrix)
 {
-	while (row >= 0)
+	while (*matrix != NULL)
 	{
-		free(matrix[row]);
-		row--;
+		free(*matrix);
+		matrix++;
 	}
 	free(matrix);
 }
@@ -60,7 +60,7 @@ static const char	*num_letters(char const *s, char c, char **matrix, int row)
 	matrix[row] = malloc(sizeof(char) * (letters + 1));
 	if (matrix[row] == 0)
 	{
-		free_matrix(matrix, row);
+		free_matrix(matrix);
 		return (NULL);
 	}
 	s = s + i - letters;
