@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/31 16:26:46 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/03 17:12:27 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,4 +108,5 @@ int		ft_abs(long n);
 
 // extra
 void	free_matrix(char **matrix);
+char	*ft_fstrjoin(char *s1, char *s2);
 #endif
