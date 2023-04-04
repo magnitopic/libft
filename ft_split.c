@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:05:34 by alaparic          #+#    #+#             */
-/*   Updated: 2023/04/03 18:16:10 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/04 18:14:19 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,13 @@ static int	num_words(char const *s, char c)
 
 void	free_matrix(char **matrix)
 {
-	while (*matrix != NULL)
+	int	i;
+
+	i = 0;
+	while (matrix[i] != NULL)
 	{
-		free(*matrix);
-		matrix++;
+		free(matrix[i]);
+		i++;
 	}
 	free(matrix);
 }
