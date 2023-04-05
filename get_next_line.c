@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:57:55 by alaparic          #+#    #+#             */
-/*   Updated: 2022/12/01 12:44:31 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/05 14:50:52 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*join_buffer(char *buffer, char *new_str)
 	if (!new_str)
 		aux = NULL;
 	else
-		aux = ft_strjoin(buffer, new_str);
+		aux = gnl_strjoin(buffer, new_str);
 	free(buffer);
 	return (aux);
 }
@@ -41,7 +41,7 @@ static char	*read_line(int fd, char *buffer)
 			*point++ = '\0';
 		len = read(fd, aux, BUFFER_SIZE);
 		buffer = join_buffer(buffer, aux);
-		if (ft_strchr(aux, '\n') != NULL)
+		if (gnl_strchr(aux, '\n') != NULL)
 			break ;
 	}
 	free(aux);
@@ -71,7 +71,7 @@ static char	*set_buffer(char *buffer)
 	char	*str;
 	int		i;
 
-	aux = ft_memchr(buffer, '\n', ft_strlen(buffer));
+	aux = gnl_memchr(buffer, '\n', ft_strlen(buffer));
 	if (!aux)
 	{
 		free(buffer);

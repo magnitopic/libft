@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/04/03 17:12:27 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/05 14:49:32 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,9 @@ int		ft_putunsig(unsigned int n);
 int		ft_putpoint(unsigned long n);
 
 // GNL functions
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-void	*ft_memchr(const void *s, int c, size_t n);
+char	*gnl_strjoin(char const *s1, char const *s2);
+char	*gnl_strchr(const char *s, int c);
+void	*gnl_memchr(const void *s, int c, size_t n);
 char	*get_next_line(int fd);
 
 // math functions

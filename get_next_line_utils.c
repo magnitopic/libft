@@ -6,13 +6,13 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:52:18 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/22 18:45:37 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/05 14:49:52 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*gnl_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		a;
@@ -40,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	char	*str;
 	int		i;
@@ -56,7 +56,7 @@ char	*ft_strchr(const char *s, int c)
 	return (&str[i]);
 }
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*gnl_memchr(const void *s, int c, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*mys;
