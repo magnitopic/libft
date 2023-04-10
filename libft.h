@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/04/05 14:49:32 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/04/10 16:01:11 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
 
 // define default value for GNL buffer
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 1
 # endif
 
 //	Libc Functions
