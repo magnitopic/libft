@@ -40,18 +40,12 @@ OBJS			= $(SRCS:.c=.o)
 SRCSB			=	lists/ft_lstnew.c \
 					lists/ft_lstadd_front.c \
 					lists/ft_lstsize.c \
-					lists/ft_lstcompare.c \
 					lists/ft_lstlast.c \
 					lists/ft_lstadd_back.c \
 					lists/ft_lstdelone.c \
 					lists/ft_lstclear.c \
 					lists/ft_lstiter.c \
-					lists/ft_lstmap.c \
-					lists/ft_lstprint_int.c \
-					lists/ft_lstprint_char.c \
-					lists/ft_get.c \
-					lists/ft_lstmin.c \
-					lists/ft_lstcpy.c
+					lists/ft_lstmap.c
 OBJSB			= $(SRCSB:.c=.o)
 
 # Math

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmin.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_new.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 16:16:15 by alaparic          #+#    #+#             */
-/*   Updated: 2023/03/08 16:26:23 by alaparic         ###   ########.fr       */
+/*   Created: 2023/06/21 19:05:02 by alaparic          #+#    #+#             */
+/*   Updated: 2023/06/21 19:15:05 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_lstmin(void *lst)
+void	ft_lstadd_new(t_list *list, void *context)
 {
-	int	i;
-	int	lst_size;
-	int	min;
+	t_list	new_node;
 
-	i = 0;
-	lst_size = ft_lstsize(lst);
-	while (i < lst_size)
+	new_node = ft_lstnew(context);
+	if (!*list)
 	{
-		if (*(int *)ft_get(lst, i)->content < min)
-			min = *(int *)ft_get(lst, i)->content;
-		i++;
+		
 	}
-	return (min);
 }
