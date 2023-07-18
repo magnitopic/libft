@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:32:59 by alaparic          #+#    #+#             */
-/*   Updated: 2023/07/18 15:00:19 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/07/18 16:23:10 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ void	ft_printmatrix(char **matrix);
 char	*ft_fstrjoin(char *s1, char *s2);
 void	ft_lstadd_new(t_list **list, void *context);
 int		ft_strcmp(const char *s1, const char *s2);
+char	**ft_sort_matrix(char **mat);
 
 #endif

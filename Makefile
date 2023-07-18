@@ -35,7 +35,8 @@ SRCS			=	ft_isalnum.c \
 					ft_fstrjoin.c \
 					ft_printmatrix.c \
 					ft_striteri.c \
-					ft_strcmp.c
+					ft_strcmp.c \
+					ft_sort_matrix.c
 OBJS			= $(SRCS:.c=.o)
 
 # Lists
