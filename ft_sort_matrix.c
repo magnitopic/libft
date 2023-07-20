@@ -6,13 +6,13 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 15:55:19 by alaparic          #+#    #+#             */
-/*   Updated: 2023/07/18 15:55:50 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/07/18 20:25:39 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_matrix_size(char **env)
+int	ft_get_matrix_size(char **env)
 {
 	int	count;
 
@@ -33,7 +33,7 @@ char	**ft_sort_matrix(char **mat)
 	char	*aux;
 
 	i = 0;
-	len = get_matrix_size(mat);
+	len = ft_get_matrix_size(mat);
 	while (i < len)
 	{
 		j = -1;
