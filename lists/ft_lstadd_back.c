@@ -6,7 +6,7 @@
 /*   By: alaparic <alaparic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:53:08 by alaparic          #+#    #+#             */
-/*   Updated: 2023/02/22 17:55:40 by alaparic         ###   ########.fr       */
+/*   Updated: 2023/08/03 11:57:58 by alaparic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 	{
 		while ((*lst)->next != 0)
-				lst = &(*lst)->next;
-			(*lst)->next = new;
+			lst = &(*lst)->next;
+		(*lst)->next = new;
 	}
 }
