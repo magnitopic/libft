@@ -20,6 +20,7 @@ SRCS			=	ft_isalnum.c \
 					ft_split.c \
 					ft_memmove.c \
 					ft_putnbr_fd.c \
+					ft_str_isdigit.c \
 					ft_strdup.c \
 					ft_strlen.c \
 					ft_strrchr.c \
